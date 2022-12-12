@@ -14,6 +14,7 @@ export const ProductCardContainer = styled.div`
     height: 95%;
     object-fit: cover;
     margin-bottom: 5px;
+    border-radius: 10px;
   }
 
   &:hover {
@@ -45,7 +46,7 @@ export const ProductCardContainer = styled.div`
 
 export const ProductCartButton = styled(Button)`
   width: 80%;
-  opacity: 0.7;
+  opacity: 0.9;
   position: absolute;
   top: 255px;
   display: none;
@@ -53,7 +54,7 @@ export const ProductCartButton = styled(Button)`
   @media screen and (max-width: 800px) {
     display: flex;
     top: 155px;
-    width: 80px;
+    min-width: unset;
     line-height: 15px;
   }
 `;

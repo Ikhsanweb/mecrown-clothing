@@ -10,27 +10,29 @@ export const BackgroundImage = styled.div`
 
 export const Body = styled.div`
   height: 90px;
-  padding: 0 25px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid black;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.9;
   position: absolute;
+  border-radius: 5%;
 
   h2 {
-    font-weight: bold;
-    margin: 0 6px 0;
+    font-weight: bolder;
+    margin: 0;
     font-size: 22px;
-    color: #4a4a4a;
+    color: darkslategrey;
     text-transform: uppercase;
   }
 
   p {
-    font-weight: lighter;
+    font-weight: 500;
     font-size: 16px;
+    margin: 0;
   }
 `;
 
@@ -44,6 +46,7 @@ export const DirectoryItemContainer = styled.div`
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
+  border-radius: 10px;
 
   &:hover {
     cursor: pointer;

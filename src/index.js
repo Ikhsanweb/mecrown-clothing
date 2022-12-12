@@ -4,11 +4,6 @@ import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
 import App from './App';
-// import { CartProvider } from './contexts/cart.context';
-// import { UserProvider } from './contexts/user.context';
-// import { CategoriesProvider } from './contexts/categories.context';
-
-import './index.scss';
 
 import { Provider } from 'react-redux';
 import { persistor, store } from './store/store';

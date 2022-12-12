@@ -6,11 +6,17 @@ export const NavigationContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 0 25px;
   margin-bottom: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: white;
 
   @media screen and (max-width: 800px) {
     height: 60px;
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 20px;
   }
 `;

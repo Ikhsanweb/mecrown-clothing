@@ -19,7 +19,7 @@ const CategoriesPreview = () => {
   const categoriesMap = useSelector(selectCategoriesMap);
   const isLoading = useSelector(selectCategoriesIsLoading);
   return (
-    <Fragment>
+    <div className="categories-preview-container">
       {isLoading ? (
         <Spinner />
       ) : (
@@ -30,7 +30,7 @@ const CategoriesPreview = () => {
           );
         })
       )}
-    </Fragment>
+    </div>
   );
 };
 
