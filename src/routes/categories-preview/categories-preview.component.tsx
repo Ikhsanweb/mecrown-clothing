@@ -1,9 +1,3 @@
-import { Fragment } from 'react';
-import './categories-preview.styles.scss';
-
-// import { CategoriesContext } from '../../contexts/categories.context';
-
-// import ProductCard from '../../components/product-card/product-card.componenet';
 import CategoryPreview from '../../components/category-preview/category-preview.component';
 import Spinner from '../../components/spinner/spinner.component';
 
@@ -12,14 +6,13 @@ import {
   selectCategoriesIsLoading,
 } from '../../store/categories/category.selector';
 import { useSelector } from 'react-redux';
+import { CategoriesPreviewContainer } from './categories-preview.styles';
 
 const CategoriesPreview = () => {
-  // const { categoriesMap } = useContext(CategoriesContext);
-
   const categoriesMap = useSelector(selectCategoriesMap);
   const isLoading = useSelector(selectCategoriesIsLoading);
   return (
-    <div className="categories-preview-container">
+    <CategoriesPreviewContainer>
       {isLoading ? (
         <Spinner />
       ) : (
@@ -30,7 +23,7 @@ const CategoriesPreview = () => {
           );
         })
       )}
-    </div>
+    </CategoriesPreviewContainer>
   );
 };
 

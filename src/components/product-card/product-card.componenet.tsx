@@ -1,4 +1,4 @@
-// import { useContext } from 'react';
+import { FC } from 'react';
 import { useSelector } from 'react-redux';
 import './product-card.styles.tsx';
 import { useDispatch } from 'react-redux';
@@ -15,10 +15,15 @@ import {
   ProductCartButton,
   Price,
 } from './product-card.styles';
+import { CategoryItem } from '../../store/categories/category.types';
 
 // import { CartContext } from '../../contexts/cart.context';
 
-const ProductCard = ({ product }) => {
+type ProductCardProps = {
+  product: CategoryItem;
+};
+
+const ProductCard: FC<ProductCardProps> = ({ product }) => {
   const { name, price, imageUrl } = product;
   const dispatch = useDispatch();
 

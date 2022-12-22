@@ -1,5 +1,4 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
-import './sign-up-form.styles.scss';
 
 import FormInput from '../form-input/form-input.component';
 import Button from '../button/button.component';
@@ -7,6 +6,7 @@ import Button from '../button/button.component';
 import { useDispatch } from 'react-redux';
 import { signUpStart } from '../../store/user/user.action';
 import { AuthError, AuthErrorCodes } from 'firebase/auth';
+import { SignUpContainer } from './sign-up-form.styles';
 const defaultFormFields = {
   displayName: '',
   email: '',
@@ -48,7 +48,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <SignUpContainer>
       <h2>Dont have an account?</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
@@ -89,7 +89,7 @@ const SignUpForm = () => {
         />
         <Button type="submit">Sign Up</Button>
       </form>
-    </div>
+    </SignUpContainer>
   );
 };
 

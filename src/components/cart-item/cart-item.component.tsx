@@ -1,6 +1,7 @@
 import { FC, memo } from 'react';
 import { CartItem as TCartItem } from '../../store/cart/cart.types';
-import './cart-item.styles.scss';
+
+import { CartItemContainer, ItemDetails } from './cart-item.styles';
 
 type CartItemProps = {
   cartItem: TCartItem;
@@ -9,15 +10,15 @@ type CartItemProps = {
 const CartItem: FC<CartItemProps> = memo(({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
   return (
-    <div className="cart-item-container">
+    <CartItemContainer>
       <img src={imageUrl} alt={`${name}`} />
-      <div className="item-details">
+      <ItemDetails>
         <span className="name">{name}</span>
         <span className="price">
           {quantity} x ${price}
         </span>
-      </div>
-    </div>
+      </ItemDetails>
+    </CartItemContainer>
   );
 });
 

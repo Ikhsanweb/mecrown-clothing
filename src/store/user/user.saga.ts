@@ -37,6 +37,8 @@ export function* getSnapshotFromUserAuth(
       yield* put(
         signInSuccess({ id: userSnapshot.id, ...userSnapshot.data() })
       );
+      console.log(userSnapshot);
+      console.log(userSnapshot.data());
     }
   } catch (error) {
     yield* put(signInFailed(error as Error));
@@ -64,6 +66,7 @@ export function* signInWithEmail({
 
     if (userCredential) {
       const { user } = userCredential;
+      console.log(user);
       yield* call(getSnapshotFromUserAuth, user);
     }
   } catch (error) {

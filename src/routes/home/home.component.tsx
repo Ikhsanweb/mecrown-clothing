@@ -3,7 +3,7 @@ import Directory from '../../components/directory/directory.component';
 
 const Home = () => {
   return (
-    <div className="home-container">
+    <div>
       <Directory />;
       <Outlet />
     </div>
